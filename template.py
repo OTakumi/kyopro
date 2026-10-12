@@ -1,18 +1,26 @@
+#!/usr/bin/env python3
 import sys
 
 # 再帰上限の引き上げ（DFSや木の探索で必須）
 sys.setrecursionlimit(2 * 10**6)
 
-# 高速入力
 input = sys.stdin.readline
 
-# 頻出定数
 INF = 10**18
-MOD = 998244353  # 問題に応じて 10**9 + 7 に変更
+{% if mod %}
+MOD = {{ mod }}
+{% else %}
+MOD = 998244353
+{% endif %}
+{% if yes_str %}
+YES = "{{ yes_str }}"
+{% endif %}
+{% if no_str %}
+NO = "{{ no_str }}"
+{% endif %}
 # DIRS4 = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 
-# 入力用ショートカット
 def ii():
     return int(input())
 
@@ -30,9 +38,6 @@ def si():
 
 
 def solve() -> None:
-    # 例:
-    # n, m = mi()
-    # a = li()
     pass
 
 
